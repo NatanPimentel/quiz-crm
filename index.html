@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Diagnóstico Anti-Vazamento de Leads | Imobiturbo.OS</title>
+  <link rel="icon" href="IMG/symbol-imobiturbo-white.png">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Descubra quantas comissões você deixa escapar todos os meses por falta de processo, follow-up e organização dos seus leads." />
+  
+  <!-- Font Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=1.2" />
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="form-card">
+
+      <!-- Botão Voltar -->
+      <button class="btn-back" id="btnBack" aria-label="Voltar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <!-- Cabeçalho Principal -->
+      <div class="form-header" id="headerImob">
+        <div class="header-icon">
+          <img src="IMG/symbol-imobiturbo-white.png" alt="Imobiturbo" style="width: 24px; height: auto;" />
+          <div class="header-icon-badge header-icon-badge--green"></div>
+        </div>
+        <h2 class="header-title">DIAGNÓSTICO COMERCIAL IMOBILIÁRIO</h2>
+        <span class="header-badge">I.A. EXPRESS VGV10X</span>
+      </div>
+
+      <!-- Barra de Progresso -->
+      <div class="progress-bar-track" id="progressTrack">
+        <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+      </div>
+
+      <!-- Conteúdo dos Passos -->
+      <div class="step-content" id="stepContent">
+        <div id="s0BgFill" class="s0-bg-fill"></div>
+
+        <!-- Passo 0: Boas-vindas -->
+        <div class="step active" data-step="0">
+          <div class="welcome-light welcome-light-1"></div>
+          <div class="welcome-light welcome-light-2"></div>
+          <div class="welcome-light welcome-light-3"></div>
+          <section class="welcome-step">
+            <div class="welcome-hero">
+              <div class="welcome-logo-wrap">
+                <img src="IMG/logo-imobiturbo-white.png" alt="Imobiturbo" class="welcome-logo-img" />
+              </div>
+              <h1 class="welcome-title">DESCUBRA QUANTAS COMISSÕES VOCÊ DEIXA ESCAPAR POR MÊS.</h1>
+              <p class="welcome-subtitle-text">Responda as perguntas. Veja quanto dinheiro está vazando por falta de processo, follow-up e organização dos leads.</p>
+            </div>
+
+            <!-- Ilustração Funil de Vazamento em Imagem Premium -->
+            <div class="welcome-visual-wrap" style="margin: 20px 0; width: 100%; display: flex; justify-content: center; position: relative;">
+              <div class="thought-bubble">Acho que tô deixando dinheiro na mesa... 💭</div>
+              <img src="IMG/leads_leak_visual.png" alt="Vazamento de leads e comissão" style="width: 100%; max-width: 280px; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-1); box-shadow: var(--shadow-2);" />
+            </div>
+
+            <div class="welcome-footer">
+              <button class="btn-continuar" type="button" id="btnIniciar">Começar</button>
+            </div>
+          </section>
+        </div>
+
+        <!-- Passo 1: Perfil do Usuário -->
+        <div class="step" data-step="1">
+          <h1 class="step-title">SEU PERFIL COMERCIAL</h1>
+          <p class="step-subtitle">Escolha sua forma de atuação principal.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="autonomo">
+              <span class="option-label">Corretor autônomo</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="imobiliaria">
+              <span class="option-label">Corretor em imobiliária</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="dono">
+              <span class="option-label">Dono ou gestor de imobiliária</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="construtor">
+              <span class="option-label">Construtor ou incorporador</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 2: Mercado de atuação -->
+        <div class="step" data-step="2">
+          <h1 class="step-title">MERCADO DE ATUAÇÃO</h1>
+          <p class="step-subtitle">Escolha seu nicho de foco.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="alto-padrao">
+              <span class="option-label">Alto padrão / Luxo</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="medio-padrao">
+              <span class="option-label">Médio padrão / Residencial</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="economico">
+              <span class="option-label">Econômico / Minha Casa Minha Vida</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="lancamentos">
+              <span class="option-label">Lançamentos / Incorporações</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="lotes">
+              <span class="option-label">Lotes e terrenos</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="comercial">
+              <span class="option-label">Comercial / Corporativo</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 3: Ticket médio do imóvel -->
+        <div class="step" data-step="3">
+          <h1 class="step-title">TICKET MÉDIO</h1>
+          <p class="step-subtitle">Ticket médio dos imóveis que você vende.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="ate-200k">
+              <span class="option-label">Até R$ 200 mil</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="200k-500k">
+              <span class="option-label">R$ 200 mil a R$ 500 mil</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="500k-1m">
+              <span class="option-label">R$ 500 mil a R$ 1 Milhão</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="1m-3m">
+              <span class="option-label">R$ 1 Milhão a R$ 3 Milhões</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="mais-3m">
+              <span class="option-label">Acima de R$ 3 Milhões</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 4: Comissão média por venda -->
+        <div class="step" data-step="4">
+          <h1 class="step-title">QUAL A SUA COMISSÃO?</h1>
+          <p class="step-subtitle">Taxa líquida média por venda.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="1.5">
+              <span class="option-label">1,5% (Lançamentos ou Parcerias)</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="3">
+              <span class="option-label">3,0% (Divisão 50/50 padrão)</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="5">
+              <span class="option-label">5,0% (Média de mercado)</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="6">
+              <span class="option-label">6,0% (Tabela padrão CRECI)</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="custom">
+              <span class="option-label">Outro percentual / Fixo</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+
+          <!-- Campo de comissão personalizada -->
+          <div class="input-group" id="customCommissionGroup" style="display:none; margin-top:16px;">
+            <label class="input-label" for="customCommissionInput">Digite o percentual da comissão (%)</label>
+            <input type="number" step="0.1" min="0.1" max="100" id="customCommissionInput" class="url-input" placeholder="Exemplo: 4.5" />
+            <span class="field-error" id="customCommissionError">Digite um percentual válido (ex: 4.5)</span>
+            <div class="step-footer" style="padding-top:12px;">
+              <button class="btn-continuar" id="btnCustomCommission">Confirmar taxa</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 5: Leads mensais -->
+        <div class="step" data-step="5">
+          <h1 class="step-title">QUANTOS LEADS RECEBE?</h1>
+          <p class="step-subtitle">Novos leads por mês.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="ate-10">
+              <span class="option-label">Até 10 leads</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="11-30">
+              <span class="option-label">11 a 30 leads</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="31-100">
+              <span class="option-label">31 a 100 leads</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="101-300">
+              <span class="option-label">101 a 300 leads</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="mais-300">
+              <span class="option-label">Mais de 300 leads</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 6: Vendas mensais -->
+        <div class="step" data-step="6">
+          <h1 class="step-title">QUANTAS VENDAS FAZ?</h1>
+          <p class="step-subtitle">Média de fechamentos mensais.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="0-1">
+              <span class="option-label">Menos de 1 venda (esporádica)</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="1">
+              <span class="option-label">1 venda por mês</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="2-3">
+              <span class="option-label">2 a 3 vendas por mês</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="4-5">
+              <span class="option-label">4 a 5 vendas por mês</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="mais-5">
+              <span class="option-label">Mais de 5 vendas por mês</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 7: Fontes de leads -->
+        <div class="step step-multiselect" data-step="7">
+          <h1 class="step-title">ONDE CAPTA LEADS?</h1>
+          <p class="step-subtitle">Canais de origem dos contatos.</p>
+
+          <div class="options-grid">
+            <button class="option-chip" data-value="ads">
+              <span class="option-label">Anúncios pagos</span>
+            </button>
+            <button class="option-chip" data-value="google">
+              <span class="option-label">Google e busca</span>
+            </button>
+            <button class="option-chip" data-value="portais">
+              <span class="option-label">Portais imobiliários</span>
+            </button>
+            <button class="option-chip" data-value="social">
+              <span class="option-label">Redes sociais</span>
+            </button>
+            <button class="option-chip" data-value="indicacoes">
+              <span class="option-label">Indicações</span>
+            </button>
+            <button class="option-chip" data-value="plantao">
+              <span class="option-label">Plantão e placas</span>
+            </button>
+            <button class="option-chip" data-value="prospeccao">
+              <span class="option-label">Prospecção ativa</span>
+            </button>
+          </div>
+
+          <div class="step-footer">
+            <button class="btn-continuar" id="btnContinuar7" disabled>Continuar</button>
+          </div>
+        </div>
+
+        <!-- Passo 8: Organização atual -->
+        <div class="step" data-step="8">
+          <h1 class="step-title">COMO GERE OS LEADS?</h1>
+          <p class="step-subtitle">Processo atual de organização.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="crm">
+              <span class="option-label">CRM imobiliário</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="planilha">
+              <span class="option-label">Planilha Excel ou Sheets</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="caderno">
+              <span class="option-label">Caderno ou agenda</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="cabeca">
+              <span class="option-label">WhatsApp ou de cabeça</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 9: Tempo de resposta -->
+        <div class="step" data-step="9">
+          <h1 class="step-title">QUAL O TEMPO DE RESPOSTA?</h1>
+          <p class="step-subtitle">Intervalo para o primeiro retorno.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="imediato">
+              <span class="option-label">Menos de 5 minutos</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="rapido">
+              <span class="option-label">5 a 30 minutos</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="moderado">
+              <span class="option-label">30 minutos a 2 horas</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="demorado">
+              <span class="option-label">Mais de 2 horas</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 10: Follow-up -->
+        <div class="step" data-step="10">
+          <h1 class="step-title">QUANTOS CONTATOS FAZ?</h1>
+          <p class="step-subtitle">Tentativas de follow-up antes de desistir.</p>
+
+          <div class="options-list">
+            <button class="option-btn" data-value="5-mais">
+              <span class="option-label">5 ou mais tentativas</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="2-4">
+              <span class="option-label">2 a 4 tentativas</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="1">
+              <span class="option-label">Apenas 1 tentativa</span>
+              <span class="option-arrow"></span>
+            </button>
+            <button class="option-btn" data-value="nenhum">
+              <span class="option-label">Nenhuma se não responder</span>
+              <span class="option-arrow"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Passo 11: Região e canal principal -->
+        <div class="step" data-step="11">
+          <h1 class="step-title">REGIÃO E CANAL</h1>
+          <p class="step-subtitle">Defina localidade, contato e automação.</p>
+
+          <div class="imob-form-card">
+            <!-- Subseção: Região -->
+            <div class="input-group">
+              <span class="input-label">Região de atuação principal:</span>
+              <div class="chips-row" id="chipsRegiao">
+                <button type="button" class="chip-select" data-group="regiao" data-value="sudeste">Sudeste</button>
+                <button type="button" class="chip-select" data-group="regiao" data-value="sul">Sul</button>
+                <button type="button" class="chip-select" data-group="regiao" data-value="nordeste">Nordeste</button>
+                <button type="button" class="chip-select" data-group="regiao" data-value="centro-oeste">Centro-Oeste</button>
+                <button type="button" class="chip-select" data-group="regiao" data-value="norte">Norte</button>
+              </div>
+            </div>
+
+            <!-- Subseção: Canal -->
+            <div class="input-group" style="margin-top:16px;">
+              <span class="input-label">Canal preferencial de contato:</span>
+              <div class="chips-row" id="chipsCanal">
+                <button type="button" class="chip-select" data-group="canal" data-value="whatsapp">WhatsApp</button>
+                <button type="button" class="chip-select" data-group="canal" data-value="ligacao">Ligação</button>
+                <button type="button" class="chip-select" data-group="canal" data-value="email">E-mail</button>
+                <button type="button" class="chip-select" data-group="canal" data-value="presencial">Presencial</button>
+              </div>
+            </div>
+
+            <!-- Subseção: Automação -->
+            <div class="input-group" style="margin-top:16px;">
+              <span class="input-label">Você utiliza ferramentas de automação hoje? (ex: chatbot, e-mail)</span>
+              <div class="chips-row" id="chipsAutomacao">
+                <button type="button" class="chip-select" data-group="automacao" data-value="sim">Sim, utilizo</button>
+                <button type="button" class="chip-select" data-group="automacao" data-value="nao">Não, manual</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer" style="margin-top:12px;">
+            <button class="btn-continuar" id="btnContinuar11" disabled>Analisar</button>
+          </div>
+        </div>
+
+        <!-- Passo 12: Tela Analisando com IA (Radar Scanner) -->
+        <div class="step" data-step="12">
+          <div class="s0-wrap">
+            <div class="s-web-container" id="radarContainer"></div>
+            <p class="s0-label">Analisando dados<span class="s0-ellipsis"></span></p>
+            <p class="s0-sublabel">Cruzando cenário com benchmarks imobiliários.</p>
+          </div>
+        </div>
+
+        <!-- Passo 13: Captura de Lead -->
+        <div class="step step-lead" data-step="13">
+          <h1 class="step-title">RELATÓRIO PRONTO</h1>
+          <p class="step-subtitle">Insira seus contatos para liberar o diagnóstico financeiro.</p>
+
+          <div class="lead-form">
+            <div class="input-group">
+              <label class="input-label" for="leadNome">Nome</label>
+              <input type="text" id="leadNome" class="url-input" placeholder="Digite seu nome" autocomplete="name" />
+              <span class="field-error" id="erroNome">Digite um nome válido.</span>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="leadEmail">E-mail corporativo</label>
+              <input type="email" id="leadEmail" class="url-input" placeholder="Digite seu e-mail" autocomplete="email" />
+              <span class="field-error" id="erroEmail">Digite um e-mail válido.</span>
+            </div>
+            <div class="input-group">
+              <label class="input-label" for="leadPhone">WhatsApp com DDD</label>
+              <input type="tel" id="leadPhone" class="url-input" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="numeric" />
+              <span class="field-error" id="erroPhone">Digite um WhatsApp válido.</span>
+            </div>
+
+            <div class="step-footer" style="padding-top:16px;">
+              <button class="btn-liberar" id="btnLiberar">Liberar diagnóstico</button>
+              <p class="lead-security-note"><span class="lead-security-text">Seus dados estão protegidos.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Passo 14: Tela Montando Diagnóstico -->
+        <div class="step" data-step="14">
+          <div class="s0-wrap">
+            <div class="s-web-container" id="s14Container"></div>
+            <p class="s0-label">Montando diagnóstico<span class="s0-ellipsis"></span></p>
+            <p class="s0-sublabel">Gerando gráfico de radar e cruzando dados.</p>
+          </div>
+        </div>
+
+        <!-- Passo 15: Resultado Financeiro -->
+        <div class="step" data-step="15">
+          <h1 class="step-title">SEU DIAGNÓSTICO COMERCIAL</h1>
+
+          <!-- Alerta Financeiro Imobiturbo Design -->
+          <div class="result-money-box">
+            Com base nas suas respostas, estimamos que você perde até <strong id="resultPerdaAnual" style="display:block; font-size: 26px; margin: 8px 0; color:var(--it-danger);">R$ 0,00</strong> por ano em comissões por falta de processo.
+          </div>
+
+          <!-- Maturidade Comercial -->
+          <div class="maturity-section">
+            <p class="maturity-title">SCORE DE MATURIDADE COMERCIAL</p>
+            <p class="maturity-subtitle">Avaliação geral de organização e velocidade.</p>
+            <div class="maturity-bar-wrapper">
+              <div class="maturity-bar-track">
+                <div class="maturity-marker" id="maturityMarker"></div>
+              </div>
+              <div class="maturity-labels">
+                <span>Iniciante (<span id="scoreVal">0</span>)</span>
+                <span>Intermediário</span>
+                <span>Avançado</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resumo de Indicadores -->
+          <div class="imob-metrics-grid">
+            <div class="imob-metric-card">
+              <span class="imob-metric-label">Comissão Média</span>
+              <span class="imob-metric-val" id="resComissaoVal">R$ 0,00</span>
+            </div>
+            <div class="imob-metric-card">
+              <span class="imob-metric-label">Leads em Risco/Mês</span>
+              <span class="imob-metric-val" id="resLeadsVal" style="color: var(--it-danger);">0</span>
+            </div>
+            <div class="imob-metric-card">
+              <span class="imob-metric-label">Vendas Recuperáveis/Mês</span>
+              <span class="imob-metric-val" id="resVendasVal" style="color: var(--it-lime);">0,0</span>
+            </div>
+            <div class="imob-metric-card">
+              <span class="imob-metric-label">Perda Mensal Estimada</span>
+              <span class="imob-metric-val" id="resPerdaMesVal" style="color: var(--it-danger);">R$ 0,00</span>
+            </div>
+          </div>
+
+          <div class="result-divider"></div>
+
+          <!-- Radar SVG de 8 Pilares -->
+          <div class="radar-section">
+            <p class="maturity-title">DETALHAMENTO POR PILARES</p>
+            <p class="maturity-subtitle">Os 8 pilares da sua máquina de vendas.</p>
+            <div id="radarChart" class="radar-chart"></div>
+          </div>
+
+          <!-- Lista de Observações Dinâmicas -->
+          <div id="radarObs" class="radar-obs-list"></div>
+
+          <div class="step-footer" style="padding-top:12px;">
+            <button class="btn-continuar btn-continuar--arrow" id="btnAvançarResultado">Ver plano de ação <span class="btn-arrow"></span></button>
+            <p style="font-size:10px; color:var(--it-fog-1); text-align:center; margin-top:14px; line-height:1.4;">Estimativa baseada nas respostas informadas. Não representa promessa de ganho.</p>
+          </div>
+        </div>
+
+        <!-- Passo 16: Oferta do CRM (Imobiturbo.OS) -->
+        <div class="step" data-step="16">
+          <div class="offer-header">
+            <div class="offer-crm-logo">
+              <img src="IMG/logo-imobiturbo-white.png" alt="Imobiturbo.OS" style="max-width: 140px; height: auto;" />
+            </div>
+            <span class="offer-tag">O sistema operacional do corretor</span>
+          </div>
+
+          <div class="next-step-box">
+            <p class="next-step-eyebrow">Plano de ação</p>
+            <h2 class="next-step-title">PARE DE PERDER LEADS POR FALTA DE PROCESSO.</h2>
+            <p class="next-step-desc" style="text-align:left; font-size:13px; margin:0 0 12px; line-height:1.5; color:var(--fg-2);">
+              Existe até <strong id="offerLossVal" style="font-weight:800; color:var(--it-danger);">R$ 0,00</strong> por ano em comissões que podem estar escapando por desorganização, demora no atendimento e falta de follow-up.
+            </p>
+            <p class="next-step-desc" style="text-align:left; font-size:13.5px; font-weight:600; margin:0 0 8px; color:var(--fg-1);">
+              O Imobiturbo.OS reúne os recursos necessários para organizar suas vendas e acelerar resultados:
+            </p>
+            <ul class="next-step-bullets" style="margin-top: 10px;">
+              <li>Funil de vendas Kanban integrado.</li>
+              <li>Captura automática de leads de portais e anúncios.</li>
+              <li>Automações de WhatsApp para primeiro contato imediato.</li>
+              <li>Lembretes inteligentes de follow-up.</li>
+              <li>Gerenciador de anúncios simplificado.</li>
+              <li>Área de membros com aulas de tráfego e vendas.</li>
+              <li>Suporte direto via WhatsApp.</li>
+            </ul>
+          </div>
+
+          <!-- Caixa de Preços -->
+          <div class="s13-pricing-box">
+            <div class="s13-pricing-header-wrap">
+              <p class="s13-pricing-header">Teste grátis por 14 dias — sem compromisso</p>
+            </div>
+            <div class="s13-pricing-row">
+              <div class="s13-pricing-left">
+                <span class="s13-brain">»</span>
+                <span class="s13-product-name">Imobiturbo.OS</span>
+              </div>
+              <div class="s13-pricing-right">
+                <span class="s13-original">R$ 47/mês</span>
+                <span class="s13-price"><span class="s13-price-currency">R$ </span>27<span style="font-size:13px; font-weight:500;">/mês</span></span>
+                <span class="s13-discount">Preço Promocional</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-footer" style="padding-top:8px;">
+            <!-- CTA Principal -->
+            <a href="https://pay.imobiturbo.os/checkout-promocional" target="_blank" rel="noopener" class="s13-cta-btn" id="btnCtaPrincipal">Começar teste grátis</a>
+            
+            <!-- CTA Secundário -->
+            <button type="button" class="btn-continuar" id="btnCtaSecundario" style="background:transparent; border: 1.5px solid var(--border-1); color:var(--fg-1); margin-top:10px; box-shadow:none;">Ver recursos detalhados</button>
+            
+            <p style="font-size:11px; color:var(--it-fog-1); text-align:center; margin-top:16px; line-height:1.4;">
+              Cancele quando quiser. Sem taxa de adesão ou fidelidade.
+            </p>
+          </div>
+
+          <!-- Gaveta/Drawer de Recursos Detalhados -->
+          <div id="drawerRecursos" class="drawer-overlay" style="display:none;">
+            <div class="drawer-card">
+              <div class="drawer-header">
+                <h3 class="drawer-title">Recursos do Imobiturbo.OS</h3>
+                <button type="button" class="btn-close-drawer" id="btnCloseDrawer" aria-label="Fechar">&times;</button>
+              </div>
+              <div class="drawer-body">
+                <div class="drawer-feature-item">
+                  <h4>Funil de vendas Kanban</h4>
+                  <p>Gerencie o avanço dos seus leads entre atendimento, visita agendada, proposta e fechamento de forma visual.</p>
+                </div>
+                <div class="drawer-feature-item">
+                  <h4>Integração WhatsApp</h4>
+                  <p>Envie mensagens rápidas usando modelos prontos e registre o histórico das conversas com um clique.</p>
+                </div>
+                <div class="drawer-feature-item">
+                  <h4>Gerador de anúncios simplificado</h4>
+                  <p>Crie e publique campanhas de captação de leads locais no Facebook e Instagram sem complicação.</p>
+                </div>
+                <div class="drawer-feature-item">
+                  <h4>Alertas inteligentes</h4>
+                  <p>Receba avisos instantâneos quando novos leads entrarem ou quando for o momento de reatar contatos frios.</p>
+                </div>
+                <div class="drawer-feature-item">
+                  <h4>Aulas e treinamentos de tráfego</h4>
+                  <p>Acesse tutoriais curtos e práticos focados em captação de clientes e scripts de qualificação imobiliária.</p>
+                </div>
+                <button type="button" class="btn-liberar" id="btnDrawerCta" style="margin-top:20px;">Começar teste grátis</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:30px"></div>
+        </div>
+
+      </div>
+
+      <!-- Footer Rodapé Fixo -->
+      <div class="step-wedo-logo" id="globalWedoLogo" style="display:none">
+        <span class="wedo-copy-top">Desenvolvido por Imobiturbo</span>
+        <span class="wedo-copy-bot">Todos os Direitos Reservados © 2026</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
